@@ -130,3 +130,26 @@ document.getElementById('exportVSCodeBtn').addEventListener('click', () => {
 
 // Initialize preview
 updatePreview();
+
+// Preset theme loading
+const themePresetSelect = document.getElementById('themePreset');
+themePresetSelect.addEventListener('change', (e) => {
+    const presetKey = e.target.value;
+    if (!presetKey) return;
+    
+    const preset = THEME_PRESETS[presetKey];
+    if (!preset) return;
+    
+    // Load all colors from preset
+    Object.keys(preset.colors).forEach(colorKey => {
+        if (colorInputs[colorKey]) {
+            colorInputs[colorKey].value = preset.colors[colorKey];
+        }
+    });
+    
+    // Update preview
+    updatePreview();
+});
+
+// Initialize preview on page load
+updatePreview();

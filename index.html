@@ -16,6 +16,20 @@
         <div class="layout">
             <aside class="color-panel">
                 <h2>Colors</h2>
+                <div class="preset-selector">
+                    <label for="themePreset">Load Preset Theme:</label>
+                    <select id="themePreset">
+                        <option value="">-- Select a theme --</option>
+                        <option value="dracula">Dracula</option>
+                        <option value="monokai">Monokai</option>
+                        <option value="nord">Nord</option>
+                        <option value="solarizedDark">Solarized Dark</option>
+                        <option value="solarizedLight">Solarized Light</option>
+                        <option value="gruvbox">Gruvbox Dark</option>
+                        <option value="oneDark">One Dark</option>
+                        <option value="tomorrowNight">Tomorrow Night</option>
+                    </select>
+                </div>
                 <div class="color-groups">
                     <div class="color-group">
                         <h3>Standard Colors</h3>
@@ -155,6 +169,7 @@
         </div>
     </div>
 
+    <script src="presets.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
